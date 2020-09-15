@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import styles from '../styles/Home.module.css'
@@ -52,31 +51,27 @@ const name = {
     return (
       <div className={styles.container}>
   
-        <main className={styles.main}>
-          <Link href='/nav'>
-            <a>nav menu</a>
-          </Link>
-  
-        <motion.div
-            initial="initial"
-            animate="enter"
-            exit="exit"
-        >
-            <motion.div variants={name}>
-            <div className={styles.name}>Catherine Plevak</div>
+        <main className={styles.main}>  
+            <motion.div
+                initial="initial"
+                animate="enter"
+                exit="exit"
+            >
+                <motion.div variants={name}>
+                    <div className={styles.name}>Catherine Plevak</div>
+                </motion.div>
+                    <div className={styles.subtitles}>
+                <motion.div variants={design}>
+                    <div>designer</div>
+                </motion.div>
+                <motion.div variants={accent}>
+                    <div className={styles.accent}>+</div>
+                </motion.div>
+                <motion.div variants={dev}>
+                    <div>developer</div>
+                </motion.div>
+                </div>
             </motion.div>
-            <div className={styles.subtitles}>
-            <motion.div variants={design}>
-                <div>designer</div>
-            </motion.div>
-            <motion.div variants={accent}>
-                <div className={styles.accent}>+</div>
-            </motion.div>
-            <motion.div variants={dev}>
-                <div>developer</div>
-            </motion.div>
-            </div>
-        </motion.div>
         </main>
   
         <footer className={styles.footer}>

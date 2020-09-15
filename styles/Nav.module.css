@@ -5,9 +5,36 @@
     border: none;
     background: transparent;
     position: absolute;
-    top: 30px;
-    left: 20px;
+    top: 5vh;
+    left: 2vw;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+}
+
+.navList {
+    position: absolute;
+    top: 7vh;
+    list-style: none;
+    /* opacity: 0.5; */
+}
+
+.navContainer {
+    opacity: 0.5;
+}
+
+.socialsListWrapper {
+    opacity: 0.5;
+}
+
+.socialsList {
+    display: flex;
+    list-style: none;
+    position: absolute;
+    top: 90vh;
+    right: 3vw;
+}
+
+.socialsListItem {
+    margin-right: 10px;
 }
