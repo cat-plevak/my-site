@@ -22,7 +22,7 @@ const itemVariants = {
       closed: {
         opacity: 0,
         transition: {
-          duration: 0.5
+          duration: 0.3
         }
       }
 };
@@ -32,11 +32,6 @@ const Nav = () => {
         <motion.div className={styles.navContainer} whileHover={{ opacity: 1 }}>
 
             <motion.ul  className={styles.navList}  variants={listVariants}>
-                <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Link href='/'>
-                        <a>c.p.</a>
-                    </Link>
-                </motion.li>
                 <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     development work
                 </motion.li>

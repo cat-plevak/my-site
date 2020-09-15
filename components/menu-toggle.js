@@ -27,17 +27,17 @@ const variants = {
   const MenuToggle = ({ toggle }) => (
             <motion.div variants={variants}>
                 <button className={styles.menuToggle} onClick={toggle}>
-                    <svg width="30" height="15" viewBox="0 0 60 30">
+                    <svg width="40" height="30" viewBox="0 0 60 20">
                         <Path
                         variants={{
                             closed: { d: "M 2 2.5 L 60 2.5" },
-                            open: { d: "M 3 25 L 30 2.5" }
+                            open: { d: "M 20 25 L 45 2.5" }
                         }}
                         />
                         <Path
                         variants={{
-                            closed: { d: "M 2 16.346 L 35 16.346" },
-                            open: { d: "M 3 2.5 L 30 25" }
+                            closed: { d: "M 15 16.346 L 60 16.346" },
+                            open: { d: "M 20 2.5 L 45 25" }
                         }}
                         />
                     </svg>

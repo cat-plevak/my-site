@@ -6,7 +6,7 @@
     background: transparent;
     position: absolute;
     top: 5vh;
-    left: 2vw;
+    right: 2vw;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -14,13 +14,23 @@
 
 .navList {
     position: absolute;
-    top: 7vh;
+    top: 8vh;
+    right: 3vw;
+    text-align: right;
     list-style: none;
-    /* opacity: 0.5; */
 }
 
 .navContainer {
     opacity: 0.5;
+}
+
+.homeButton {
+    position: absolute;
+    left: 3vw;
+    top: 3vh;
+    font-family: 'DM Serif Display', serif;
+    font-size: 35px;
+    color: red;
 }
 
 .socialsListWrapper {
