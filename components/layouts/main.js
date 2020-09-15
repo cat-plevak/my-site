@@ -10,25 +10,14 @@ import Link from 'next/link';
 import { useRef } from "react";
 import { motion, useCycle } from "framer-motion";
 
-const sidebar = {
-    open: (height = 1000) => ({
-        clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
-        transition: {
-        type: "spring",
-        stiffness: 20,
-        restDelta: 2
-        }
-    }),
-    closed: {
-        clipPath: "circle(0px at 40px 40px)",
-        transition: {
-        delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40
-        }
+const logoVariants = {
+    initial: { opacity: 0 },
+    enter: { opacity: 1, transition: { delay: 1.3, duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] } },
+    exit: {
+      opacity: 0,
+      transition: { ease: [0.48, 0.15, 0.25, 0.96] }
     }
-};
+}
 
 const MainLayout = ({ children }) => {
     const router = useRouter();
@@ -45,10 +34,16 @@ const MainLayout = ({ children }) => {
                 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet"/>
             </Head>
             <div className="page-wrapper">
-                <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }} className={navStyles.homeButton}>
-                    <Link href='/'>
-                        <a>c.</a>
-                    </Link>
+                <motion.div
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                >
+                    <motion.div variants={logoVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }} className={navStyles.homeButton}>
+                        <Link href='/'>
+                            <a>c.</a>
+                        </Link>
+                    </motion.div>
                 </motion.div>
                 <motion.nav
                     initial={false}

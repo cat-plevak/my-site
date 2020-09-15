@@ -33,7 +33,14 @@ const Nav = () => {
 
             <motion.ul  className={styles.navList}  variants={listVariants}>
                 <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    development work
+                    <Link href='/design'>
+                        <a>design work</a>
+                    </Link>
+                </motion.li>
+                <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <Link href='/development'>
+                        <a>development work</a>
+                    </Link>
                 </motion.li>
                 <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                     <Link href='/about'>
@@ -41,10 +48,14 @@ const Nav = () => {
                     </Link>
                 </motion.li>
                 <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    resume
+                    <Link href='/resume'>
+                        <a>resume</a>
+                    </Link>
                 </motion.li>
                 <motion.li variants={itemVariants} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    contact
+                    <Link href='/contact'>
+                        <a>contact</a>
+                    </Link>
                 </motion.li>
             </motion.ul>
         </motion.div>

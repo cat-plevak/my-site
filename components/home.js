@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
-
+import Link from 'next/link';
 import styles from '../styles/Home.module.css'
-import MenuToggle from './menu-toggle';
 
 const name = {
     initial: { scale: 0.96, x: -300, opacity: 0 },
@@ -61,14 +60,18 @@ const name = {
                     <div className={styles.name}>Catherine Plevak</div>
                 </motion.div>
                     <div className={styles.subtitles}>
-                <motion.div variants={design}>
-                    <div>designer</div>
+                <motion.div variants={design} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <Link href='/design'>
+                        <a>designer</a>
+                    </Link>
                 </motion.div>
                 <motion.div variants={accent}>
                     <div className={styles.accent}>+</div>
                 </motion.div>
-                <motion.div variants={dev}>
-                    <div>developer</div>
+                <motion.div variants={dev} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <Link href='/development'>
+                        <a>developer</a>
+                    </Link>
                 </motion.div>
                 </div>
             </motion.div>

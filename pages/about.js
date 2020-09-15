@@ -33,13 +33,11 @@ const body = {
         opacity: 1, 
         transition:
             {
-                delay: 0.2,
                 duration: 1,
                 ease: [0.48, 0.15, 0.25, 0.96] 
              },
     },
     exit: {
-        delay: 0.2,
         y: 500,
         opacity: 0,
         transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
