@@ -30,7 +30,7 @@ const Socials = () => {
                     <a href='https://www.linkedin.com/in/catherineplevak/'><LinkedInIcon style={{ color: 'red' }}/></a>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }}>
-                    <a href='https://www.linkedin.com/in/catherineplevak/'><GitHubIcon style={{ color: 'red' }}/></a>
+                    <a href='https://github.com/cat-plevak'><GitHubIcon style={{ color: 'red' }}/></a>
                 </motion.li>
             </motion.ul>
         </motion.div>

@@ -1,0 +1,30 @@
+.container {
+    min-height: 90vh;
+    padding: 0 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main {
+    width: 100%;
+    position: relative;
+  }
+
+  .name {
+    font-family: 'DM Serif Display', serif;
+    text-transform: lowercase;
+    font-size: 60px;
+  }
+  
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .line {
+      width: 0px;
+      height: 2px;
+      border-bottom: 2px solid red;
+  }

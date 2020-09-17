@@ -24,7 +24,6 @@ const MainLayout = ({ children }) => {
     const [isOpen, toggleOpen] = useCycle(false, true);
     const containerRef = useRef(null);
     const { height } = useDimensions(containerRef);
-    console.log(router.pathname)
 
     return (
         <div>
@@ -51,7 +50,9 @@ const MainLayout = ({ children }) => {
                     animate={isOpen ? "open" : "closed"}
                     ref={containerRef}
                 >
-                    <Nav />
+                    <div className="nav">
+                        <Nav />
+                    </div>
                     <MenuToggle toggle={() => toggleOpen()} />
                 </motion.nav>
                 <Socials />

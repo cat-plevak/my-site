@@ -4,20 +4,22 @@
     outline: none;
     border: none;
     background: transparent;
-    position: absolute;
+    position: fixed;
     top: 5vh;
     right: 2vw;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
+    z-index: 100;
 }
 
 .navList {
-    position: absolute;
+    position: fixed;
     top: 8vh;
     right: 3vw;
     text-align: right;
     list-style: none;
+    z-index: 100;
 }
 
 .navContainer {
@@ -25,7 +27,7 @@
 }
 
 .homeButton {
-    position: absolute;
+    position: fixed;
     left: 3vw;
     top: 3vh;
     font-family: 'DM Serif Display', serif;
@@ -41,10 +43,16 @@
     display: flex;
     list-style: none;
     position: absolute;
-    top: 90vh;
+    bottom: 10px;
     right: 3vw;
 }
 
 .socialsListItem {
     margin-right: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .navContainer {
+        opacity: 1;
+    }
 }
