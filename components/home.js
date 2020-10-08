@@ -2,44 +2,62 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import styles from '../styles/Home.module.css'
 
+const hello = {
+  initial: { x: '18vw', opacity: 0 },
+  enter: { scale: 1, x: '21vw', opacity: 1, transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] } },
+  exit: {
+    x: '18vw',
+    opacity: 0,
+    transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
+  }
+};
+
 const name = {
-    initial: { scale: 0.96, x: -300, opacity: 0 },
-    enter: { scale: 1, x: '21vw', opacity: 1, transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] } },
-    exit: {
-      scale: 0.96,
-      x: -500,
-      opacity: 0,
-      transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
-    }
-  };
-  
-  const design = {
-    initial: { scale: 0.96, x: -300, opacity: 0 },
+    initial: { x: '18vw', opacity: 0 },
     enter: { scale: 1, x: '21vw', opacity: 1, transition: { delay: 0.2, duration: 1, ease: [0.48, 0.15, 0.25, 0.96] } },
     exit: {
-      delay: 0.3,
-      scale: 0.6,
-      x: -300,
+      y: '10vw',
       opacity: 0,
-      transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
+      transition: { duration: 1.4, ease: [0.48, 0.15, 0.25, 0.96] }
     }
   };
   
-  const dev = {
-    initial: { scale: 0.96, x: '21.5vw', y: 500, opacity: 0 },
-    enter: { scale: 1, y: 0, opacity: 1, transition: { delay: 0.2, duration: 1, ease: [0.48, 0.15, 0.25, 0.96] } },
+  const blurbDown = {
+    initial: { scale: 0.96, x: '21.5vw', y: 30, opacity: 0 },
+    enter: { scale: 1, y: 0, opacity: 1, transition: { delay: 0.6, duration: 1, ease: [0.48, 0.15, 0.25, 0.96] } },
     exit: {
       delay: 0.2,
       scale: 0.6,
-      y: 500,
+      y: 30,
       opacity: 0,
       transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
     }
   };
+
+  const blurbUp = {
+    initial: { scale: 0.96, x: '21.5vw', y: -30, opacity: 0 },
+    enter: { scale: 1, y: 0, opacity: 1, transition: { delay: 0.6, duration: 1, ease: [0.48, 0.15, 0.25, 0.96] } },
+    exit: {
+      delay: 0.2,
+      scale: 0.6,
+      y: -30,
+      opacity: 0,
+      transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
+    }
+  }
   
   const accent = {
-    initial: { opacity: 0, x: '21.25vw' },
-    enter: { opacity: 1, transition: { delay: 1.3, duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] } },
+    initial: { opacity: 0, x: '21.5vw' },
+    enter: { opacity: 1, transition: { delay: 1.3, duration: 0.7, ease: [0.48, 0.15, 0.25, 0.96] } },
+    exit: {
+      opacity: 0,
+      transition: { ease: [0.48, 0.15, 0.25, 0.96] }
+    }
+  };
+
+  const rotated = {
+    initial: { opacity: 0, x: '22.1vw', y: 10 },
+    enter: { y: 22, opacity: 1, transition: { delay: 1.3, duration: 0.7, ease: [0.48, 0.15, 0.25, 0.96] } },
     exit: {
       opacity: 0,
       transition: { ease: [0.48, 0.15, 0.25, 0.96] }
@@ -55,25 +73,68 @@ const name = {
                 initial="initial"
                 animate="enter"
                 exit="exit"
+                className={styles.flexwrapper}
             >
+            <div className={styles.blocks}>
+                <motion.div
+                  className={styles.div2}
+                    drag
+                    dragConstraints={{
+                      top: -50,
+                      left: -50,
+                      right: 50,
+                      bottom: 50,
+                    }}
+                />
+                <motion.div
+                  className={styles.div3}
+                    drag
+                    dragConstraints={{
+                      top: -50,
+                      left: -50,
+                      right: 50,
+                      bottom: 50,
+                    }}
+                />
+                <motion.div
+                  className={styles.div1}
+                    drag
+                    dragConstraints={{
+                      top: -50,
+                      left: -50,
+                      right: 50,
+                      bottom: 50,
+                    }}
+                />
+            </div>
+              <div className={styles.helloWrapper}>
+                <motion.div variants={hello}>
+                    <div className={styles.hello}>hi,</div>
+                </motion.div>
+              </div>
+              <div className={styles.nameWrapper}>
                 <motion.div variants={name}>
-                    <div className={styles.name}>Catherine Plevak</div>
+                    <div className={styles.name}>i'm <span className={styles.italic}>cat</span></div>
                 </motion.div>
-                    <div className={styles.subtitles}>
-                <motion.div variants={design} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                    <Link href='/design'>
-                        <a>designer</a>
-                    </Link>
+                <motion.div variants={rotated}>
+                  <p className={styles.rotated}>i'm a</p>
                 </motion.div>
-                <motion.div variants={accent}>
-                    <div className={styles.accent}>+</div>
-                </motion.div>
-                <motion.div variants={dev} whileHover={{ color: 'red', scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-                <Link href='/development'>
-                        <a>developer</a>
-                    </Link>
-                </motion.div>
+                <div className={styles.subtitles}>
+                  <motion.div>
+                      <motion.div variants={blurbUp} whileHover={{ color: '#000000', scale: 1.02 }} whileTap={{ scale: 0.98 }} className={styles.title}>
+                        <Link href='/design'>
+                            <a>designer </a>
+                        </Link>
+                      </motion.div>
+                      <motion.div  className={styles.accent} variants={accent}>and</motion.div>
+                      <motion.div variants={blurbDown} whileHover={{ color: '#000000', scale: 1.02 }} whileTap={{ scale: 0.98 }} className={styles.title}>
+                        <Link href='/development'>
+                            <a>developer </a>
+                        </Link>
+                      </motion.div>
+                  </motion.div>
                 </div>
+              </div>
             </motion.div>
         </main>
   

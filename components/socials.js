@@ -27,10 +27,10 @@ const Socials = () => {
                 variants={socialVariants}
             >
                 <motion.li className={styles.socialsListItem} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }}>
-                    <a href='https://www.linkedin.com/in/catherineplevak/'><LinkedInIcon style={{ color: 'red' }}/></a>
+                    <a href='https://www.linkedin.com/in/catherineplevak/'><LinkedInIcon style={{ color: '#EB3629' }}/></a>
                 </motion.li>
                 <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }}>
-                    <a href='https://github.com/cat-plevak'><GitHubIcon style={{ color: 'red' }}/></a>
+                    <a href='https://github.com/cat-plevak'><GitHubIcon style={{ color: '#EB3629' }}/></a>
                 </motion.li>
             </motion.ul>
         </motion.div>

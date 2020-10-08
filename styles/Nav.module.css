@@ -4,9 +4,9 @@
     outline: none;
     border: none;
     background: transparent;
-    position: fixed;
-    top: 5vh;
-    right: 2vw;
+    position: absolute;
+    top: 20px;
+    right: 30px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -14,9 +14,9 @@
 }
 
 .navList {
-    position: fixed;
-    top: 8vh;
-    right: 3vw;
+    position: absolute;
+    top: 6vh;
+    right: 40px;
     text-align: right;
     list-style: none;
     z-index: 100;
@@ -27,12 +27,12 @@
 }
 
 .homeButton {
-    position: fixed;
-    left: 3vw;
-    top: 3vh;
+    position: absolute;
+    left: 40px;
+    top: 12px;
     font-family: 'DM Serif Display', serif;
-    font-size: 35px;
-    color: red;
+    font-size: 30px;
+    color: #EB3629;
 }
 
 .socialsListWrapper {
@@ -42,9 +42,10 @@
 .socialsList {
     display: flex;
     list-style: none;
-    position: absolute;
-    bottom: 10px;
-    right: 3vw;
+    /* position: absolute;
+    bottom: 20px;
+    right: 20px; */
+    margin-top: -50px;
 }
 
 .socialsListItem {

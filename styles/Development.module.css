@@ -22,9 +22,3 @@
     display: flex;
     flex-wrap: wrap;
   }
-
-  .line {
-      width: 0px;
-      height: 2px;
-      border-bottom: 2px solid red;
-  }

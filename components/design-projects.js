@@ -1,4 +1,6 @@
 import styles from '../styles/Design.module.css';
+import { useState } from 'react';
+import Link from 'next/link';
 
 import { motion } from 'framer-motion';
 
@@ -24,13 +26,16 @@ const projectsItem = {
     },
     exit: {
         opacity: 0,
-        transitoion: {
+        transition: {
             duration: 0.5
         }
     }
 }
 
 const DesignProjects = ({}) => {
+    const [selectedProject, setSelectedProject] = useState(null)
+    console.log(selectedProject)
+
     return (
         <motion.div
         initial="initial"
@@ -38,9 +43,33 @@ const DesignProjects = ({}) => {
         exit="exit"
         >
             <motion.div  variants={projectsList} className={styles.projectsList}>
-                <motion.div variants={projectsItem} className={styles.project}></motion.div>
-                <motion.div variants={projectsItem} className={styles.project}></motion.div>
-                <motion.div variants={projectsItem} className={styles.project}></motion.div>
+                { (selectedProject === null || selectedProject === 1) &&
+                    // <Link href='/one'>
+                        <a onClick={() => setSelectedProject(1)}>
+                            <motion.div variants={projectsItem} className={styles.project}>
+                                project one
+                            </motion.div>
+                        </a>
+                    // </Link>
+                }
+                { (selectedProject === null || selectedProject === 2) &&
+                    // <Link href='/designProjects/one'>
+                        <a onClick={() => setSelectedProject(2)}>
+                            <motion.div variants={projectsItem} className={styles.project}>
+                                project one
+                            </motion.div>
+                        </a>
+                    // </Link>
+                }
+                { (selectedProject === null || selectedProject === 3) &&
+                    // <Link href='/designProjects/one'>
+                        <a onClick={() => setSelectedProject(3)}>
+                            <motion.div variants={projectsItem} className={styles.project}>
+                                project one
+                            </motion.div>
+                        </a>
+                    // </Link>
+                }
             </motion.div>
         </motion.div>
     )

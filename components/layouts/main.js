@@ -33,30 +33,32 @@ const MainLayout = ({ children }) => {
                 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins&display=swap" rel="stylesheet"/>
             </Head>
             <div className="page-wrapper">
-                <motion.div
-                    initial="initial"
-                    animate="enter"
-                    exit="exit"
-                >
-                    <motion.div variants={logoVariants} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.98 }} className={navStyles.homeButton}>
-                        <Link href='/'>
-                            <a>c.</a>
-                        </Link>
+                <div className='nav-container'>
+                    <motion.div
+                        initial="initial"
+                        animate="enter"
+                        exit="exit"
+                    >
+                        <motion.div variants={logoVariants} whileHover={{ scale: 1.01 }} whileTap={{ scale: 0.98 }} className={navStyles.homeButton}>
+                            <Link href='/'>
+                                <a>catherineplevak</a>
+                            </Link>
+                        </motion.div>
                     </motion.div>
-                </motion.div>
-                <motion.nav
-                    initial={false}
-                    custom={height}
-                    animate={isOpen ? "open" : "closed"}
-                    ref={containerRef}
-                >
-                    <div className="nav">
-                        <Nav />
-                    </div>
-                    <MenuToggle toggle={() => toggleOpen()} />
-                </motion.nav>
-                <Socials />
+                    <motion.nav
+                        initial={false}
+                        custom={height}
+                        animate={isOpen ? "open" : "closed"}
+                        ref={containerRef}
+                    >
+                        <div className="nav">
+                            <Nav />
+                        </div>
+                        <MenuToggle toggle={() => toggleOpen()} />
+                    </motion.nav>
+                </div>
                 <div className="content-wrapper">{children}</div>
+                <Socials />
             </div>
         </div>
     )

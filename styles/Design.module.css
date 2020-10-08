@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 70%;
     margin: auto;
 }
 
@@ -25,13 +25,6 @@
     flex-wrap: wrap;
   }
 
-  .line {
-      width: 0px;
-      height: 2px;
-      border-bottom: 2px solid red;
-      margin-bottom: 40px;
-  }
-
   .projectsList {
       display: flex;
       justify-content: flex-start;
@@ -44,14 +37,21 @@
       margin-right: 20px;
   }
 
+  .projectTitle {
+    font-family: 'DM Serif Display', serif;
+    text-transform: lowercase;
+    font-size: 60px;
+    display: block;
+  }
+
   @media screen and (max-width: 600px) {
+    .container {
+        width: 80%;
+    }
+    
     .name {
         font-size: 40px;
         margin-bottom: 20px;
-    }
-
-    .line {
-        display: none;
     }
 
     .projectsList {

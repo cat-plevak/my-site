@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const title = {
     initial: {
-        x: -300,
+        x: -30,
         opacity: 0
     },
     enter: {
@@ -17,27 +17,9 @@ const title = {
         }
     },
     exit: {
-        x: -500,
+        x: -30,
         opacity: 0,
         transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
-    }
-};
-
-const line = {
-    initial: {
-        x: 0,
-        width: 0,
-        opacity: 0
-    },
-    enter: {
-        width: '21%',
-        opacity: 1,
-        transition: { delay: 1.2, duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
-    },
-    exit: {
-        width: 0,
-        opacity: 0,
-        transition: { delay: 0.2, duration: 0.5, ease: [0.48, 0.15, 0.25, 0.96] }
     }
 };
 
@@ -53,7 +35,6 @@ const Design = ({}) => {
                     <motion.div variants={title}>
                         <div className={styles.name}>design work</div>
                     </motion.div>
-                    <motion.div variants={line} className={styles.line}></motion.div>
                     <DesignProjects />
                 </motion.div>
             </main>

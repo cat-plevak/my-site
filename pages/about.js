@@ -53,12 +53,16 @@ const About = ({}) => {
                     animate="enter"
                     exit="exit"
                 >
-                    <motion.div variants={title}>
-                        <div className={styles.name}>about</div>
-                    </motion.div>
-                    <motion.div variants={body}>
-                        <div className={styles.body}>Howdy! This is where I will tell you about myself.</div>
-                    </motion.div>
+                    <div className={styles.flexWrapper}>
+                        <motion.div variants={title}>
+                            <div className={styles.name}>about</div>
+                        </motion.div>
+                    </div>
+                    <div className={styles.flexWrapper}>
+                        <motion.div variants={body}>
+                            <div className={styles.body}>Howdy! But figured I should streamline things a bit if I wanted any shot at making a living. C'est la vie. I'm passionate about collaboration and learning from people and pushing myself to be infintely multi-disciplinary. I am a lover of pies and swiss design and my dog, Whoopi. Professionally, I'm kind of obsessed with design systems and designer/developer collaboration. If you're interested in learing more about my work with design systems, you can check it out here, here, and here.</div>
+                        </motion.div>
+                    </div>
                 </motion.div>
             </main>
         </div>
@@ -66,3 +70,5 @@ const About = ({}) => {
 };
 
 export default About;
+
+// christina tosi, if you are reading this, I want to be your friend very badly

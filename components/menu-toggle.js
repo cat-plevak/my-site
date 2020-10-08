@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState } from 'react';
 
 import styles from '../styles/Nav.module.css';
 
@@ -6,23 +7,13 @@ const Path = props => (
     <motion.path
         fill="transparent"
         strokeWidth="3"
-        stroke="red"
+        stroke="transparent"
         strokeLinecap="round"
         {...props}
-    />
+    >
+        <animate attributeName='stroke' dur='0.5s' from='transparent' to='#EB3629' fill='freeze' begin='0.7s'/>
+    </motion.path>
 );
-
-const variants = {
-    initial: { opacity: 1 },
-    enter: {
-        opacity: 1,
-        transition: { delay: 1.3, duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
-    },
-    exit: {
-        opacity: 0,
-        transition: { duration: 1, ease: [0.48, 0.15, 0.25, 0.96] }
-    }
-};
 
   const MenuToggle = ({ toggle }) => (
     <button className={styles.menuToggle} onClick={toggle}>
